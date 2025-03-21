@@ -34,6 +34,7 @@ spec:
   type: ClusterIP
   ports:
     - port: 5432
+      targetPort: 5432
   selector:
     app: postgre
 ---
@@ -79,6 +80,5 @@ spec:
   ports:
     - port: 80
       targetPort: 5000
-      nodePort: 30000
   selector:
     app: fakeshop
